@@ -1,17 +1,21 @@
 import React from "react";
+import * as S from "./styled"
+import logo from "../../assets/logo.svg"
 
 import SignUpForm from "./SignUpForm";
-import useUntectedPage from "../../hooks/useUnprotectedPage"
+// import useUntectedPage from "../../hooks/useUnprotectedPage"
 
 const SignUpPage = () => {
-  useUntectedPage()
+//   useUntectedPage()
   return (
-    <div>
-      <div>
-        <h1>Olá, boas vindas ao LabEddit</h1>
-      </div>
+    <S.MainContainer>
+        <S.MainHeader></S.MainHeader>
+      <S.LogoContainer>
+        <img src={logo}/>
+      </S.LogoContainer>
+      <p><strong>Cadastrar</strong></p>
       <SignUpForm />
-    </div>
+    </S.MainContainer>
   );
 };
 export default SignUpPage;
