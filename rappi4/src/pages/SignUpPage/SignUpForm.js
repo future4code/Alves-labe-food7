@@ -5,7 +5,7 @@ import { registerUser } from "../../services/profile";
 
 
 const SignUpForm = () => {
-  const { form, handleInputChange, clear } = useForm({
+  const { form, onChange, clear } = useForm({
     name: "",
     email: "",
     cpf: "",
@@ -25,7 +25,7 @@ const SignUpForm = () => {
         placeholder="Nome de usuário"
         type="text"
         value={form.name}
-        onChange={handleInputChange}
+        onChange={onChange}
         required
       />
       <input
@@ -33,7 +33,7 @@ const SignUpForm = () => {
         placeholder="E-mail"
         type="email"
         value={form.email}
-        onChange={handleInputChange}
+        onChange={onChange}
         required
       />
       <input
@@ -43,7 +43,7 @@ const SignUpForm = () => {
         title={"000.000.000-00"}
         type="cpf"
         value={form.cpf}
-        onChange={handleInputChange}
+        onChange={onChange}
         required
       />
       <input
@@ -51,7 +51,7 @@ const SignUpForm = () => {
         placeholder="password"
         type="password"
         value={form.password}
-        onChange={handleInputChange}
+        onChange={onChange}
         required
         pattern={"^.{6,}"}
         title={"Senha deve ter no mínimo 6 caracteres"}
