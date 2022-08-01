@@ -1,6 +1,13 @@
-export default function App() {
+import React from "react"
+import RoutesPage from "../src/router/RoutesPage"
+
+
+const App =() => {
   return (
-    <div>Opa</div>
+    <div>
+     <RoutesPage/>
+    </div>
   )
 }
 
+export default App
