@@ -28,4 +28,4 @@ const RoutesPage = () => {
     </BrowserRouter>
 }
 
-export default RoutesPage 
+export default RoutesPage
