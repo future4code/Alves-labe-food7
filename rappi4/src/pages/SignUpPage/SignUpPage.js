@@ -11,7 +11,7 @@ const SignUpPage = () => {
   return (
     <S.MainContainer>
       <Header />
-      <S.MainHeader></S.MainHeader>
+      {/* <S.MainHeader></S.MainHeader> */}
       <S.LogoContainer>
         <img src={logo} />
       </S.LogoContainer>
