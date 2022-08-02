@@ -53,7 +53,7 @@ export const Input = styled.input`
   color: black;
   font-family: "Noto Sans";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0.5rem;
@@ -77,6 +77,13 @@ export const Button = styled.button`
   border-radius: 2px;
   background-color: #e86e5a;
   border: none;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
 `;
 
 export const TextSignUp = styled.div`
@@ -91,4 +98,47 @@ export const TextSignUp = styled.div`
   margin-top: 0.5rem;
   margin-left: 2.5rem;
   margin-right: 1rem;
+`;
+
+export const Fieldset = styled.fieldset`
+  flex-direction: row;
+  border: 1px solid #d5d8de;
+  background: #ffffff;
+  width: 328px;
+  height: 56px;
+  color: #b8b8b8;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 30px;
+  margin-bottom: 0.5rem;
+  align-items: flex-start;
+  display: flex;
+  border-radius: 4px;
+
+  legend {
+    margin-right: auto;
+    color: #b8b8b8;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+  }
+  input {
+    width: 264px;
+    height: 18px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    color: black;
+    border: none;
+    ::placeholder {
+      color: #b8b8b8;
+      font-family: "Roboto";
+    }
+  }
 `;
