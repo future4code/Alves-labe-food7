@@ -9,6 +9,7 @@ export const ScreenContainer = styled.div`
 `;
 
 export const Text = styled.div`
+  margin-top: 1.5rem;
   text-align: center;
   font-style: normal;
   font-family: "IBM Plex Sans", sans-serif;
@@ -21,10 +22,10 @@ export const Text = styled.div`
     font-weight: 700;
   }
   p {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.313rem;
     color: #000000;
-    font-weight: 300;
+    font-weight: normal;
     padding: 0;
     margin: 0;
   }
@@ -63,7 +64,7 @@ export const Input = styled.input`
 `;
 
 export const Form = styled.form`
-  margin-top: 3rem;
+  margin-top: 0.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -79,7 +80,7 @@ export const Button = styled.button`
   border: none;
   font-family: "Roboto";
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;

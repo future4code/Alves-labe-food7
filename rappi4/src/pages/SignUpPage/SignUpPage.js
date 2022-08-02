@@ -1,25 +1,24 @@
 import React from "react";
-import * as S from "./styled";
+import { ScreenContainer, LogoContainer, Text } from "./styled";
 import logo from "../../assets/logo.svg";
 import Header from "../../components/Header";
 
 import SignUpForm from "./SignUpForm";
-import useUntectedPage from "../../hooks/useUnprotectedPage"
+import useUntectedPage from "../../hooks/useUnprotectedPage";
 
 const SignUpPage = () => {
-  useUntectedPage()
+  useUntectedPage();
   return (
-    <S.MainContainer>
+    <ScreenContainer>
       <Header />
-      {/* <S.MainHeader></S.MainHeader> */}
-      <S.LogoContainer>
+      <LogoContainer>
         <img src={logo} />
-      </S.LogoContainer>
-      <p>
-        <strong>Cadastrar</strong>
-      </p>
+      </LogoContainer>
+      <Text>
+        <p>Cadastrar</p>
+      </Text>
       <SignUpForm />
-    </S.MainContainer>
+    </ScreenContainer>
   );
 };
 export default SignUpPage;
