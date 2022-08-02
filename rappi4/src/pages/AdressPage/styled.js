@@ -63,48 +63,20 @@ export const Input = styled.input`
 `;
 
 export const Form = styled.form`
-  margin-top: 8.438rem;
+  margin-top: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const ButtonLogin = styled.button`
-  margin-top: 1rem;
-  padding: 13px 133px;
-  gap: 10px;
-  width: 365px;
-  height: 51px;
-  background: linear-gradient(90deg, #ff6489 0%, #f9b24e 100%);
-  border-radius: 27px;
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  color: white;
+export const Button = styled.button`
+  width: 328px;
+  height: 42px;
+  margin: 8px 0 0;
+  border-radius: 2px;
+  background-color: #e86e5a;
   border: none;
-`;
-
-export const ButtonSignUp = styled.button`
-  margin-top: 2rem;
-  gap: 10px;
-  width: 365px;
-  height: 51px;
-  background: white;
-  border-radius: 27px;
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  color: #fe7e02;
-  border: 1px solid #fe7e02;
-  text-align: center;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `;
 
 export const TextSignUp = styled.div`
@@ -119,13 +91,4 @@ export const TextSignUp = styled.div`
   margin-top: 0.5rem;
   margin-left: 2.5rem;
   margin-right: 1rem;
-`;
-
-export const Check = styled.div`
-  display: flex;
-  flex-direction: row;
-  input {
-    margin-right: 0.75rem;
-    margin-left: 0;
-  }
 `;
