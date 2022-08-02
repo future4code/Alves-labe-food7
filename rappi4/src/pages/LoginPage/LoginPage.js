@@ -10,11 +10,12 @@ const LoginPage = () => {
       password: "",
     })
 
-    //const navigate = useNavigate()
+  
 
     const onSubmitSignUp = (event) => {
       event.preventDefault();
       login(form, clear);
+     
     };
   
 
@@ -42,7 +43,7 @@ const LoginPage = () => {
         onChange={onChange}
         required
       />
-       <button>criar</button>
+       <button>Login</button>
       </form>
            
        </div>)

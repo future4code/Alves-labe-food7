@@ -16,3 +16,5 @@ export const registerUser = (bory, clear, navigate) => {
       // alert(error.response.data);
     });
 };
+
+

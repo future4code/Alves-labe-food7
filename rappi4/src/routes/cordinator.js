@@ -13,7 +13,7 @@ export const goToSeach = (navigate) => {
     navigate("/seach")
 }
 export const goToResult = (navigate) => {
-    navigate("/sesult")
+    navigate("/result")
 }
 export const goToEditProfile = (navigate) => {
     navigate("/editProfile")
