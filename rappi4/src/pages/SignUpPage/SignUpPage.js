@@ -3,10 +3,10 @@ import * as S from "./styled"
 import logo from "../../assets/logo.svg"
 
 import SignUpForm from "./SignUpForm";
-// import useUntectedPage from "../../hooks/useUnprotectedPage"
+import useUntectedPage from "../../hooks/useUnprotectedPage"
 
 const SignUpPage = () => {
-//   useUntectedPage()
+  useUntectedPage()
   return (
     <S.MainContainer>
         <S.MainHeader></S.MainHeader>

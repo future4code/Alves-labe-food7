@@ -1,30 +1,30 @@
 export const goToLogin = (navigate) => {
-    navigate("/login")
-}
-
-export const goToAdress = (navigate) => {
-    navigate("/Adress")
-}
-
-export const goToCart = (navigate) => {
-    navigate("/Cart")
-}
-export const goToSeach = (navigate) => {
-    navigate("/Seach")
-}
-export const goToResult = (navigate) => {
-    navigate("/Result")
-}
-export const goToEditProfile = (navigate) => {
-    navigate("/EditProfile")
-}
-export const goToSignUp = (navigate) => {
     navigate("/")
 }
 
+export const goToAdress = (navigate) => {
+    navigate("/adress")
+}
+
+export const goToCart = (navigate) => {
+    navigate("/cart")
+}
+export const goToSeach = (navigate) => {
+    navigate("/seach")
+}
+export const goToResult = (navigate) => {
+    navigate("/result")
+}
+export const goToEditProfile = (navigate) => {
+    navigate("/editProfile")
+}
+export const goToSignUp = (navigate) => {
+    navigate("signUp")
+}
+
 export const goToFeedPage = (navigate) => {
-    navigate("/FeedPage")
+    navigate("/feedPage")
 }
 export const goToProfilePage = (navigate) => {
-    navigate("/ProfilePage")
+    navigate("/profilePage")
 }

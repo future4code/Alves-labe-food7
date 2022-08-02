@@ -1,8 +1,8 @@
 import { BASE_URL } from "../constants/urls";
 import axios from "axios";
-import { goToAdress } from "../routes/cordinator";
+import {goToAdress} from "../routes/cordinator"
 
-export const registerUser = (bory, clear)   => {
+export const registerUser = (bory, clear, navigate)   => {
     axios
       .post(`${BASE_URL}/signup`, bory)
       .then((response) => {
