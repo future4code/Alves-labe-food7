@@ -12,7 +12,7 @@ export const Text = styled.div`
   margin-top: 1.5rem;
   text-align: center;
   font-style: normal;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Roboto";
   h1 {
     color: #373737;
     font-size: 2.25rem;
