@@ -19,7 +19,7 @@ export const goToEditProfile = (navigate) => {
     navigate("/editProfile")
 }
 export const goToSignUp = (navigate) => {
-    navigate("signUp")
+    navigate("/signUp")
 }
 
 export const goToFeedPage = (navigate) => {

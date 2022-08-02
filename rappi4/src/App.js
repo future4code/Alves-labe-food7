@@ -14,8 +14,7 @@ const MainContainer = styled.div`
 export default function App() {
   return (
     <MainContainer>
-      <RoutesPage/>
-      {/* <SignUpPage/> */}
+      < RoutesPage/>
     </MainContainer>
   )
 }
