@@ -9,9 +9,10 @@ export const ScreenContainer = styled.div`
 `;
 
 export const Text = styled.div`
+  margin-top: 1.5rem;
   text-align: center;
   font-style: normal;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Roboto";
   h1 {
     color: #373737;
     font-size: 2.25rem;
@@ -21,10 +22,10 @@ export const Text = styled.div`
     font-weight: 700;
   }
   p {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.313rem;
     color: #000000;
-    font-weight: 300;
+    font-weight: normal;
     padding: 0;
     margin: 0;
   }
@@ -53,7 +54,7 @@ export const Input = styled.input`
   color: black;
   font-family: "Noto Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0.5rem;
@@ -63,7 +64,7 @@ export const Input = styled.input`
 `;
 
 export const Form = styled.form`
-  margin-top: 3rem;
+  margin-top: 0.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,7 @@ export const Form = styled.form`
 `;
 
 export const Button = styled.button`
-  width: 328px;
+  width: 344px;
   height: 42px;
   margin: 8px 0 0;
   border-radius: 2px;
@@ -79,25 +80,11 @@ export const Button = styled.button`
   border: none;
   font-family: "Roboto";
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.39px;
-`;
-
-export const TextSignUp = styled.div`
-  font-family: "Noto Sans";
-  font-style: normal;
-  color: black;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  align-items: center;
-  text-align: left;
-  margin-top: 0.5rem;
-  margin-left: 2.5rem;
-  margin-right: 1rem;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -112,7 +99,8 @@ export const Fieldset = styled.fieldset`
   font-weight: 400;
   font-size: 12px;
   line-height: 30px;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  padding: 8px, 0, 8px, 0;
   align-items: flex-start;
   display: flex;
   border-radius: 4px;

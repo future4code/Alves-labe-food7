@@ -1,30 +1,34 @@
 export const goToLogin = (navigate) => {
-    navigate("/")
-}
+  navigate("/");
+};
 
 export const goToAdress = (navigate) => {
-    navigate("/adress")
-}
+  navigate("/adress");
+};
 
 export const goToCart = (navigate) => {
-    navigate("/cart")
-}
+  navigate("/cart");
+};
 export const goToSeach = (navigate) => {
-    navigate("/seach")
-}
+  navigate("/seach");
+};
 export const goToDetailRestaurant = (navigate) => {
-    navigate("/detail/restaurant")
-}
+  navigate("/detail/restaurant");
+};
 export const goToEditProfile = (navigate) => {
-    navigate("/editProfile")
-}
+  navigate("/editProfile");
+};
 export const goToSignUp = (navigate) => {
-    navigate("/signUp")
-}
+  navigate("/signUp");
+};
 
 export const goToFeedPage = (navigate) => {
-    navigate("/feedPage")
-}
+  navigate("/feedPage");
+};
 export const goToProfilePage = (navigate) => {
-    navigate("/profilePage")
-}
+  navigate("/profilePage");
+};
+
+export const goBack = (navigate) => {
+  navigate(-1);
+};
