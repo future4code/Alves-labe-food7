@@ -15,13 +15,13 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage"
 const RoutesPage = () => {
     <BrowserRouter>
         <Routes>
-            <Route index element={  <LoginPage />} />
+           <Route index element={  <LoginPage />} />
            <Route path="Adress" element={<AdressPage />}/>
            <Route path="Cart" element={<CartPage/>}/>
            <Route path="Seach" element={ <SearchPage/>}/>
            <Route path="Result" element={<ResultPage/>}/>
            <Route path="EditProfile" element={<EditProfilePage/>}/>
-           <Route path="SignUp" element={<SignUpPage/>}/>
+           <Route path="/" element={<SignUpPage/>}/>
            <Route path="FeedPage" element={<FeedPage/>}/>
            <Route path="ProfilePage" element={<ProfilePage/>}/>
         </Routes>
@@ -29,3 +29,4 @@ const RoutesPage = () => {
 }
 
 export default RoutesPage
+

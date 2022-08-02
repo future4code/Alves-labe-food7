@@ -1,4 +1,4 @@
-import { goToAddAdressPage } from "../routes/cordinator";
+import { goToAdress } from "../routes/cordinator";
 import { useNavigate } from "react-router-dom";
 import { useLayoutEffect } from "react";
 
@@ -7,7 +7,7 @@ const useUntectedPage = () => {
   useLayoutEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {      
-      goToAddAdressPage(navigate);
+      goToAdress(navigate);
     }
   }, [navigate]);
 };
