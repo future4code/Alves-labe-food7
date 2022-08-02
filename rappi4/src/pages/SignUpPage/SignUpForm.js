@@ -1,6 +1,6 @@
 import React from "react";
 import useForm from "../../hooks/useForm";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../services/profile";
 
 
@@ -11,11 +11,11 @@ const SignUpForm = () => {
     cpf: "",
     password: "",
   });
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onSubmitSignUp = (event) => {
     event.preventDefault();
-    registerUser(form, clear);
+    registerUser(form, clear, navigate);
   };
 
   return (

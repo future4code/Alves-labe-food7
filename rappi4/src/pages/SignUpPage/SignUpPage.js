@@ -4,14 +4,14 @@ import logo from "../../assets/logo.svg";
 import Header from "../../components/Header";
 
 import SignUpForm from "./SignUpForm";
-// import useUntectedPage from "../../hooks/useUnprotectedPage"
+import useUntectedPage from "../../hooks/useUnprotectedPage"
 
 const SignUpPage = () => {
-  //   useUntectedPage()
+  useUntectedPage()
   return (
     <S.MainContainer>
       <Header />
-      <S.MainHeader></S.MainHeader>
+      {/* <S.MainHeader></S.MainHeader> */}
       <S.LogoContainer>
         <img src={logo} />
       </S.LogoContainer>
