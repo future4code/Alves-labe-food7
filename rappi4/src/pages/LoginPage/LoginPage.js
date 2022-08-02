@@ -33,7 +33,7 @@ const LoginPage = () => {
         <img src={logo} />
       </LogoContainer>
       <Text>
-        <p>Cadastrar</p>
+        <p>Entrar</p>
       </Text>
       <Form onSubmit={onSubmitSignUp}>
         <Fieldset>
