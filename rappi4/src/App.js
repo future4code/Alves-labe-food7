@@ -1,15 +1,19 @@
 import React from "react"
-import RoutesPage from "./router/RoutesPage"
+import styled from "styled-components"
+import SignUpPage from "./pages/SignUpPage/SignUpPage"
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+`
 
-
-const App = () => {
+export default function App() {
   return (
-    <div>
-      < RoutesPage />
-      
-    </div>
+    <MainContainer>
+      <SignUpPage/>
+    </MainContainer>
   )
 }
 
-export default App
