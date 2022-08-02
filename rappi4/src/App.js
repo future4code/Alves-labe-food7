@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import SignUpPage from "./pages/SignUpPage/SignUpPage"
+//import SignUpPage from "./pages/SignUpPage/SignUpPage"
+import RoutesPage from "./routes/RoutesPage"
 
 const MainContainer = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const MainContainer = styled.div`
 export default function App() {
   return (
     <MainContainer>
-      <SignUpPage/>
+      < RoutesPage/>
     </MainContainer>
   )
 }

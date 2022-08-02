@@ -13,20 +13,23 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage"
 
 
 const RoutesPage = () => {
+   return(
     <BrowserRouter>
-        <Routes>
-           <Route index element={  <LoginPage />} />
-           <Route path="Adress" element={<AdressPage />}/>
-           <Route path="Cart" element={<CartPage/>}/>
-           <Route path="Seach" element={ <SearchPage/>}/>
-           <Route path="Result" element={<ResultPage/>}/>
-           <Route path="EditProfile" element={<EditProfilePage/>}/>
-           <Route path="/" element={<SignUpPage/>}/>
-           <Route path="FeedPage" element={<FeedPage/>}/>
-           <Route path="ProfilePage" element={<ProfilePage/>}/>
-        </Routes>
-    </BrowserRouter>
-}
+    < Routes>
+       < Route index element={  <LoginPage />} />
+       < Route path="/adress" element={<AdressPage />}/>
+       < Route path="/cart" element={<CartPage/>}/>
+       < Route path="/seach" element={ <SearchPage/>}/>
+       < Route path="/result" element={<ResultPage/>}/>
+       < Route path="/editProfile" element={<EditProfilePage/>}/>
+       < Route path="/signUp" element={<SignUpPage/>}/>
+       < Route path="/feedPage" element={<FeedPage/>}/>
+       < Route path="/profilePage" element={<ProfilePage/>}/>
+    </ Routes>
+</BrowserRouter>
+)}
+   
+  
 
 export default RoutesPage
 
