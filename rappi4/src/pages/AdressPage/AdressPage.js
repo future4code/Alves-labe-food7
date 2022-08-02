@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AdressPage= ()=> {
+const AdressPage = ()=> {
   return (
     <div>AdressPage</div>
   )

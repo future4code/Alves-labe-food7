@@ -1,6 +1,6 @@
 import { BASE_URL } from "../constants/urls";
 import axios from "axios";
-// import { goToAddAdressPage } from "../routes/cordinator";
+import { goToAdress } from "../routes/cordinator";
 
 export const registerUser = (bory, clear)   => {
     axios
@@ -8,7 +8,7 @@ export const registerUser = (bory, clear)   => {
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         alert("Usuário cadastrado com sucesso!")
-       
+        goToAdress(navigate);
         clear();
       })
       .catch((error) => {
