@@ -1,6 +1,6 @@
-export const getRestaurants = (bory, clear, navigate) => {
+/*export const getRestaurants = (bory, clear, navigate) => {
     axios
-      .post(`${BASE_URL}/restaurants`, bory)
+      .post(`${BASE_URL}/restaurants`, body)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         clear();
@@ -10,4 +10,4 @@ export const getRestaurants = (bory, clear, navigate) => {
         // alert(error.response.data);
       });
   };
-  
+  */

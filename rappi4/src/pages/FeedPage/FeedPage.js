@@ -1,15 +1,16 @@
-import React from 'react'
+import React , {useContext}from "react";
+import { GlobalContext } from "../../services/Global/GlobalContext";
 import { useNavigate } from 'react-router-dom'
-import useRequestData from '../../hooks/useRequestData'
-import { BASE_URL } from '../../constants/urls' 
+import { BASE_URL } from "../../constants/urls";
+
 
 const FeedPage = ()=> {
-  const navigate = useNavigate()
-  const receberRestaurants = useRequestData([],`${BASE_URL}/restaurants`)
-  console.log(receberRestaurants)
  
+ // const {restaurants,setRestaurantes}= useContext(GlobalContext)
+ // console.log(setRestaurantes)
+
   return (
-    <div>FeedPage</div>
+    <div>feed</div>
   )
 }
 
