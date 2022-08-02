@@ -12,7 +12,7 @@ function Header() {
 
   const headerText = () => {
     if (window.location.pathname === `/signup`) {
-      return <Text>Teste</Text>;
+      return <Text>Teste!</Text>;
     }
   };
   return (
