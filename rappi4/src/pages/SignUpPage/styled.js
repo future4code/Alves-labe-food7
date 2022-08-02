@@ -49,13 +49,13 @@ export const LogoContainer = styled.div`
   justify-content: center;
 `;
 
-export const MainHeader = styled.div`
-  width: 360px;
-  height: 64px;
-  margin: 0 0 24px;
-  padding: 0 0 10px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
-  background-color: #fff;
-`;
+// export const MainHeader = styled.div`
+//   width: 360px;
+//   height: 64px;
+//   margin: 0 0 24px;
+//   padding: 0 0 10px;
+//   -webkit-backdrop-filter: blur(10px);
+//   backdrop-filter: blur(10px);
+//   box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
+//   background-color: #fff;
+// `;

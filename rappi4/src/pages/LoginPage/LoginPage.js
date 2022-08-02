@@ -1,5 +1,5 @@
 import React from "react"
-//import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import useForm from "../../hooks/useForm";
 import { login } from "../../services/user";
 
@@ -10,11 +10,11 @@ const LoginPage = () => {
       password: "",
     })
 
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const onSubmitSignUp = (event) => {
       event.preventDefault();
-      login(form, clear);
+      login(form, clear, navigate);
     };
   
 

@@ -9,8 +9,9 @@ export const createAdress = (body, clear, navigate) => {
       },
     })
     .then((res) => {
-      localStorage.setItem("token2", res.data.token);
+      localStorage.setItem("token", res.data.token);
       console.log(res.data);
+      console.log(localStorage.getItem("token"),  res.data.token);
       clear();
     })
     .catch((err) => console.log(err.response.data));

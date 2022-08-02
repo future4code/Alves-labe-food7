@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ResultPage = ()=> {
+const DetailRestaurant = ()=> {
   return (
     <div> ResultPage</div>
   )
 }
 
-export default  ResultPage
+export default  DetailRestaurant

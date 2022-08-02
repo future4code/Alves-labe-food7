@@ -12,8 +12,8 @@ export const goToCart = (navigate) => {
 export const goToSeach = (navigate) => {
     navigate("/seach")
 }
-export const goToResult = (navigate) => {
-    navigate("/result")
+export const goToDetailRestaurant = (navigate) => {
+    navigate("/detail/restaurant")
 }
 export const goToEditProfile = (navigate) => {
     navigate("/editProfile")
