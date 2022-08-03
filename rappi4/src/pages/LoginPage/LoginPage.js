@@ -1,39 +1,63 @@
-import React from "react"
-//import { useNavigate } from "react-router";
+import React from "react";
+import { useNavigate } from "react-router";
 import useForm from "../../hooks/useForm";
 import { login } from "../../services/user";
-
+import {
+  Button,
+  Form,
+  Fieldset,
+  ScreenContainer,
+  LogoContainer,
+  Text,
+} from "./styled";
+import Header from "../../components/Header";
+import logo from "../../assets/logo.svg";
+import { goToSignUp } from "../../routes/cordinator";
 
 const LoginPage = () => {
-   const { form, onChange, clear } = useForm({
-      email: "",
-      password: "",
-    })
+  const { form, onChange, clear } = useForm({
+    email: "",
+    password: "",
+  });
+  const navigate = useNavigate();
 
-    //const navigate = useNavigate()
+  const onSubmitSignUp = (event) => {
+    event.preventDefault();
+    login(form, clear, navigate);
+  };
 
-    const onSubmitSignUp = (event) => {
-      event.preventDefault();
-      login(form, clear);
-    };
-  
-
-   return(
-   
-   
-   <div> LoginPage
-      
-      <form onSubmit={onSubmitSignUp}>
-     
-      <input
-        name="email"
-        placeholder="E-mail"
-        type="email"
-        value={form.email}
-        onChange={onChange}
-        required
-      />
-
+  return (
+    <ScreenContainer>
+      <Header />
+      <LogoContainer>
+        <img src={logo} />
+      </LogoContainer>
+      <Text>
+        <p>Cadastrar</p>
+      </Text>
+      <Form onSubmit={onSubmitSignUp}>
+        <Fieldset>
+          <legend>E-mail*</legend>
+          <input
+            name="email"
+            placeholder="email@email.com"
+            type="email"
+            value={form.email}
+            onChange={onChange}
+            required
+          />
+        </Fieldset>
+        <Fieldset>
+          <legend>Senha*</legend>
+          <input
+            name="password"
+            placeholder="Mínimo 6 caracteres"
+            type="password"
+            value={form.password}
+            onChange={onChange}
+            required
+          />
+        </Fieldset>
        <input
         name="password"
         placeholder="password"
@@ -42,11 +66,21 @@ const LoginPage = () => {
         onChange={onChange}
         required
       />
-       <button>criar</button>
+       <button>Login</button>
       </form>
            
        </div>)
    
 }
+        <Button>Entrar</Button>
+      </Form>
+      <Text>
+        <p onClick={() => goToSignUp(navigate)}>
+          Não possui cadastro? Clique aqui.
+        </p>
+      </Text>
+    </ScreenContainer>
+  );
+};
 
-export default LoginPage
+export default LoginPage;
