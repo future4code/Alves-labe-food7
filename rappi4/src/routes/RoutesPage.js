@@ -22,9 +22,8 @@ const RoutesPage = () => {
        < Route index element={  <LoginPage />} />
        < Route path="/adress" element={<AdressPage />}/>
        < Route path="/cart" element={<CartPage/>}/>
-       < Route path="/search" element={ <SearchPage/>}/>
-       {/* < Route path="/result" element={<ResultPage/>}/> */}
-       < Route path="/detail/restaurant" element={<DetailRestaurant/>}/>
+       < Route path="/search" element={ <SearchPage/>}/>       
+       < Route path="/detail/restaurant/:restaurantId" element={<DetailRestaurant/>}/>
        < Route path="/editProfile" element={<EditProfilePage/>}/>
        < Route path="/signUp" element={<SignUpPage/>}/>
        < Route path="/feedPage" element={<FeedPage/>}/>

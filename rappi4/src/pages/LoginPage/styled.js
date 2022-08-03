@@ -21,13 +21,13 @@ export const Fieldset = styled.fieldset`
   border: 1px solid #d5d8de;
   background: #ffffff;
   width: 328px;
-  height: 56px;
+  height: 72px;
   color: #b8b8b8;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 30px;
+  line-height: 40px;
   margin: 0;
   padding: 8px, 0, 8px, 0;
   align-items: flex-start;
@@ -47,12 +47,14 @@ export const Fieldset = styled.fieldset`
     font-family: "Roboto";
     font-size: 16px;
     font-weight: normal;
+    line-height: 16px;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.39px;
     color: black;
     border: none;
+    margin-left: 0.5rem;
     ::placeholder {
       color: #b8b8b8;
       font-family: "Roboto";

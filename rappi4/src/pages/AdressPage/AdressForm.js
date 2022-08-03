@@ -25,7 +25,6 @@ function AdressForm() {
       <Fieldset>
         <legend>Logradouro*</legend>
         <Input
-          legend="Logradouro*"
           name={"street"}
           id="street"
           value={form.street}

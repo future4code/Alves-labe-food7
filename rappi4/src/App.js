@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import SignUpPage from "./pages/SignUpPage/SignUpPage"
 import RoutesPage from "./routes/RoutesPage"
 import GlobalState from "./services/Global/GlobalState"
 
