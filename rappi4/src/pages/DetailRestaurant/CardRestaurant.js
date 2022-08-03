@@ -9,11 +9,11 @@ const CardRestaurant = (props) => {
           <CR.ImgCard src={product.photoUrl} />
         </div>
         <CR.ProductCard>
-          <p>{product.name}</p>
-          <p>{product.description}</p>
-          <p>{product.price}</p>
-          <button>adicionar</button>
-          <button>remover</button>
+          <CR.ResName>{product.name}</CR.ResName>
+          <CR.Description>{product.description}</CR.Description>
+          <CR.Price>R$ {product.price}</CR.Price>
+          <CR.Button>adicionar</CR.Button>
+          {/* <button>remover</button> */}
         </CR.ProductCard>
       </CR.CardContainer>
     );

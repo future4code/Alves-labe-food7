@@ -9,8 +9,8 @@ export const goToAdress = (navigate) => {
 export const goToCart = (navigate) => {
   navigate("/cart");
 };
-export const goToSeach = (navigate) => {
-  navigate("/seach");
+export const goToSearch = (navigate) => {
+  navigate("/search");
 };
 export const goToDetailRestaurant = (navigate, id) => {
   navigate(`/detail/restaurant/${id}`);
@@ -32,7 +32,6 @@ export const goToProfilePage = (navigate) => {
 export const goBack = (navigate) => {
   navigate(-1);
 };
-
 
 export const goUpdateProfile = (navigate) => {
   navigate("/update");
