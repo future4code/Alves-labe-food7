@@ -10,6 +10,8 @@ import EditProfilePage from "../pages/EditProfilePage/EditProfilePage"
 import SignUpPage from "../pages/SignUpPage/SignUpPage"
 import FeedPage from "../pages/FeedPage/FeedPage"
 import ProfilePage from "../pages/ProfilePage/ProfilePage"
+import UpdateProfile from "../pages/ProfilePage/UpdateProfile"
+import UpdateAdress from "../pages/AdressPage/UpdateAdress"
 
 
 
@@ -27,6 +29,8 @@ const RoutesPage = () => {
        < Route path="/signUp" element={<SignUpPage/>}/>
        < Route path="/feedPage" element={<FeedPage/>}/>
        < Route path="/profilePage" element={<ProfilePage/>}/>
+       < Route path="/update" element={<UpdateProfile/>}/>
+       < Route path="/UpdateAdress" element={<UpdateAdress/>}/>
     </ Routes>
 </BrowserRouter>
 )}

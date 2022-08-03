@@ -24,7 +24,7 @@ function AdressForm() {
     <Form onSubmit={onSubmitForm}>
       <Fieldset>
         <legend>Logradouro*</legend>
-        <input
+        <Input
           legend="Logradouro*"
           name={"street"}
           id="street"
