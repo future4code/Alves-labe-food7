@@ -2,8 +2,8 @@ import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import AdressPage from "../pages/AdressPage/AdressPage"
-import CartPage from "../pages/CartPage/CartPage"
-import SearchPage from "../pages/SearchPage/SearchPage"
+import {CartPage} from "../pages/CartPage/CartPage"
+import {SearchPage} from "../pages/SearchPage/SearchPage"
 import ResultPage from "../pages/ResultPage/ResultPage"
 import EditProfilePage from "../pages/EditProfilePage/EditProfilePage"
 import SignUpPage from "../pages/SignUpPage/SignUpPage"
@@ -19,7 +19,7 @@ const RoutesPage = () => {
        < Route index element={  <LoginPage />} />
        < Route path="/adress" element={<AdressPage />}/>
        < Route path="/cart" element={<CartPage/>}/>
-       < Route path="/seach" element={ <SearchPage/>}/>
+       < Route path="/search" element={ <SearchPage/>}/>
        < Route path="/result" element={<ResultPage/>}/>
        < Route path="/editProfile" element={<EditProfilePage/>}/>
        < Route path="/signUp" element={<SignUpPage/>}/>
