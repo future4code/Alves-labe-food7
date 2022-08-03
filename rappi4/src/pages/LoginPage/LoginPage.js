@@ -58,28 +58,23 @@ const LoginPage = () => {
             required
           />
         </Fieldset>
-       <input
-        name="password"
-        placeholder="password"
-        type="password"
-        value={form.password}
-        onChange={onChange}
-        required
-      />
-       <button>Login</button>
-      </form>
-           
-       </div>)
-   
-}
-        <Button>Entrar</Button>
-      </Form>
-      <Text>
-        <p onClick={() => goToSignUp(navigate)}>
-          Não possui cadastro? Clique aqui.
-        </p>
-      </Text>
-    </ScreenContainer>
+        <input
+          name="password"
+          placeholder="password"
+          type="password"
+          value={form.password}
+          onChange={onChange}
+          required
+        />
+        <button>Login</button>
+<Button>Entrar</Button>
+      </Form >
+  <Text>
+    <p onClick={() => goToSignUp(navigate)}>
+      Não possui cadastro? Clique aqui.
+    </p>
+  </Text>
+    </ScreenContainer >
   );
 };
 

@@ -26,6 +26,7 @@ export function CartPage() {
           <h1>SUBTOTAL</h1>
           <p>R$67,00</p>
         </div>
+        <h1 className="pagamento">Forma depagamento</h1>
       </Bottom>
       <Footer>
         <div>
