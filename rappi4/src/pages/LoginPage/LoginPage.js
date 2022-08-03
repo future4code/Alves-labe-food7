@@ -67,11 +67,6 @@ const LoginPage = () => {
         required
       />
        <button>Login</button>
-      </form>
-           
-       </div>)
-   
-}
         <Button>Entrar</Button>
       </Form>
       <Text>
