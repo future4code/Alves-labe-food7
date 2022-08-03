@@ -9,9 +9,9 @@ import { BASE_URL } from '../../constants/urls'
 const GlobalState = (props) => {
 
    
-
+    const [perfil, setPerfil]= useState([])
     const [restaurants, setRestaurantes] = useState([])
-    const values = { restaurants, setRestaurantes, }
+    const values = { restaurants, setRestaurantes, perfil,setPerfil }
     const Provider = GlobalContext.Provider
 
     return (
