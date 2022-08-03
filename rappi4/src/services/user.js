@@ -17,6 +17,8 @@ export const login = (body, clear, navigate) => {
                 goToFeedPage(navigate)
             }
             clear()
+           
+
         })
         .catch((error) => {
             alert(error.response.data.message)

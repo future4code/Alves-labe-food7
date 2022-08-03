@@ -58,7 +58,20 @@ const LoginPage = () => {
             required
           />
         </Fieldset>
-
+       <input
+        name="password"
+        placeholder="password"
+        type="password"
+        value={form.password}
+        onChange={onChange}
+        required
+      />
+       <button>Login</button>
+      </form>
+           
+       </div>)
+   
+}
         <Button>Entrar</Button>
       </Form>
       <Text>
