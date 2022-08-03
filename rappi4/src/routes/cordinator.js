@@ -12,8 +12,8 @@ export const goToCart = (navigate) => {
 export const goToSeach = (navigate) => {
   navigate("/seach");
 };
-export const goToDetailRestaurant = (navigate) => {
-  navigate("/detail/restaurant");
+export const goToDetailRestaurant = (navigate, id) => {
+  navigate(`/detail/restaurant/${id}`);
 };
 export const goToEditProfile = (navigate) => {
   navigate("/editProfile");

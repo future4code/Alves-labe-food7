@@ -71,6 +71,19 @@ const SignUpForm = () => {
           title={"Senha deve ter no mínimo 6 caracteres"}
         />
       </Fieldset>
+      <Fieldset>
+        <legend>Confirme sua Senha*</legend>
+        <input
+          name="password"
+          placeholder="Mínimo 6 caracteres"
+          type="password"
+          value={form.password}
+          onChange={onChange}
+          required
+          pattern={"^.{6,}"}
+          title={"Senha deve ter no mínimo 6 caracteres"}
+        />
+      </Fieldset>
 
       <Button>Criar</Button>
     </Form>
