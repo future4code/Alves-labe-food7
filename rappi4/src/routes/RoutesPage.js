@@ -4,7 +4,7 @@ import LoginPage from "../pages/LoginPage/LoginPage"
 import AdressPage from "../pages/AdressPage/AdressPage"
 import {CartPage} from "../pages/CartPage/CartPage"
 import {SearchPage} from "../pages/SearchPage/SearchPage"
-import ResultPage from "../pages/ResultPage/ResultPage"
+// import ResultPage from "../pages/ResultPage/ResultPage"
 import DetailRestaurant from "../pages/DetailRestaurant/DetailRestaurant.js.js"
 import EditProfilePage from "../pages/EditProfilePage/EditProfilePage"
 import SignUpPage from "../pages/SignUpPage/SignUpPage"
@@ -21,7 +21,7 @@ const RoutesPage = () => {
        < Route path="/adress" element={<AdressPage />}/>
        < Route path="/cart" element={<CartPage/>}/>
        < Route path="/search" element={ <SearchPage/>}/>
-       < Route path="/result" element={<ResultPage/>}/>
+       {/* < Route path="/result" element={<ResultPage/>}/> */}
        < Route path="/detail/restaurant" element={<DetailRestaurant/>}/>
        < Route path="/editProfile" element={<EditProfilePage/>}/>
        < Route path="/signUp" element={<SignUpPage/>}/>
