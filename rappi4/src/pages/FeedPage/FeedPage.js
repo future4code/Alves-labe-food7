@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 //import { GlobalContext } from "../../services/Global/GlobalContext";
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from "../../constants/urls";
 import axios from "axios";
+import { goToDetailRestaurant } from "../../routes/cordinator";
 import { CardRestaurante, Image, Line, ResName } from "./styled";
 
 const FeedPage = () => {
   const [restaurants, setRestaurantes] = useState([]);
+   const navigate = useNavigate();
+
 
   useEffect(() => {
     PegarRestaurantes();
@@ -33,7 +36,7 @@ const FeedPage = () => {
 
   const rendeRestaurants = restaurants.map((res) => {
     return (
-      <CardRestaurante key={res.id}>
+      <CardRestaurante key={res.id} onClick={() => goToDetailRestaurant(navigate, res.id)>
         <Image>
           <img src={res.logoUrl} />
           {/* <Image2 src={res.logoUrl} /> */}
@@ -44,6 +47,7 @@ const FeedPage = () => {
           <p>Frete R${res.shipping},00</p>
         </Line>
       </CardRestaurante>
+
     );
   });
 
