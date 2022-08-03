@@ -2,10 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import { BASE_URL } from "../../constants/urls";
-
+import { useNavigate } from 'react-router-dom'
+import { goUpdateProfile,goUpdateAdress } from '../../routes/cordinator';
 
 const ProfilePage = () => {
-
+  const navigate = useNavigate()
   const [perfil, setPerfil] = useState([])
   const [history, setHistory] = useState({})
 
@@ -63,10 +64,15 @@ const ProfilePage = () => {
       <p>{perfil.name}</p>
       <p>{perfil.email}</p>
       <p>{perfil.cpf}</p>
-      <span>Endereço cadastrado:
-        <hr />
-        {perfil.address}</span>
-      <button>editar</button>
+      <button onClick={() => goUpdateProfile(navigate)}>editar</button>
+      <div>
+        <span>Endereço cadastrado:
+          <hr />
+          {perfil.address}</span>
+          <button onClick={() => goUpdateAdress(navigate)}>editar</button>
+      </div>
+
+
     </div>
   )
 }

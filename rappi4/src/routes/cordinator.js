@@ -32,3 +32,12 @@ export const goToProfilePage = (navigate) => {
 export const goBack = (navigate) => {
   navigate(-1);
 };
+
+
+export const goUpdateProfile = (navigate) => {
+  navigate("/update");
+};
+
+export const goUpdateAdress = (navigate) => {
+  navigate("/UpdateAdress");
+};
