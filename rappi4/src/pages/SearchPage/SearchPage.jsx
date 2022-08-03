@@ -16,5 +16,6 @@ export function SearchPage() {
       <Input type="text" placeholder="Restaurante" />
       <P>Busque por nome de restaurante</P>
     </Screen>
+    //
   )
 }
