@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 //import { GlobalContext } from "../../services/Global/GlobalContext";
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from "../../constants/urls";
 import axios from "axios";
-import { Image } from "./styled";
-import { useNavigate } from "react-router";
 import { goToDetailRestaurant } from "../../routes/cordinator";
+import { CardRestaurante, Image, Line, ResName } from "./styled";
 
 const FeedPage = () => {
   const [restaurants, setRestaurantes] = useState([]);
-  const navigate = useNavigate();
+   const navigate = useNavigate();
+
 
   useEffect(() => {
     PegarRestaurantes();
@@ -36,14 +36,18 @@ const FeedPage = () => {
 
   const rendeRestaurants = restaurants.map((res) => {
     return (
-      <div key={res.id} onClick={() => goToDetailRestaurant(navigate, res.id)}>
-        <div>
-          <Image src={res.logoUrl} />
-        </div>
-        <p>{res.name}</p>
-        <p>{res.deliveryTime}min</p>
-        <p>Frete R${res.shipping},00</p>
-      </div>
+      <CardRestaurante key={res.id} onClick={() => goToDetailRestaurant(navigate, res.id)>
+        <Image>
+          <img src={res.logoUrl} />
+          {/* <Image2 src={res.logoUrl} /> */}
+        </Image>
+        <ResName>{res.name}</ResName>
+        <Line>
+          <p>{res.deliveryTime}min</p>
+          <p>Frete R${res.shipping},00</p>
+        </Line>
+      </CardRestaurante>
+
     );
   });
 
