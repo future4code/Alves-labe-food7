@@ -9,7 +9,7 @@ const DetailRestaurant = () => {
   const [detailRestaurant, setDetailRestaurant] = useState([]);
   const [cardProducts, setCardProducts] = useState([]);
 
-  const params = useParams(); 
+  const params = useParams();
   console.log(detailRestaurant);
   console.log(cardProducts);
 
@@ -21,29 +21,32 @@ const DetailRestaurant = () => {
           auth: token,
         },
       })
-      .then((response) => {        
+      .then((response) => {
         setDetailRestaurant(response.data.restaurant);
         setCardProducts(response.data.restaurant.products);
       })
       .catch((error) => {
         console.log(error.response);
       });
-  }, []);    
+  }, []);
 
   return (
-    <div>
-      <div>
-        <D.ImgLogo src={detailRestaurant?.logoUrl} />
-        <h1>{detailRestaurant.name}</h1>
-        <p>{detailRestaurant.category}</p>
-        <p>
-          {detailRestaurant.deliveryTime} {detailRestaurant.shipping}
-        </p>
-        <p>{detailRestaurant.address}</p>
-      </div>
-      <h3>Produtos</h3>      
-      <CardRestaurant cardProducts={cardProducts}/>
-    </div>
+    <D.ScreenContainer>
+      <D.ImgLogo src={detailRestaurant?.logoUrl} />
+      <D.HederDetails>
+        <D.ResName>{detailRestaurant.name}</D.ResName>
+        <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
+        <D.Line>
+          <p>{detailRestaurant.deliveryTime} min</p>
+          <D.Ship>Frete R${detailRestaurant.shipping},00</D.Ship>
+        </D.Line>
+
+        <D.FontDetails>{detailRestaurant.address}</D.FontDetails>
+      </D.HederDetails>
+      <D.Products>Produtos</D.Products>
+      <D.Lin></D.Lin>
+      <CardRestaurant cardProducts={cardProducts} />
+    </D.ScreenContainer>
   );
 };
 
