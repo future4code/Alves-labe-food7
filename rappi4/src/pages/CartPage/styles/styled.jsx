@@ -93,18 +93,3 @@ export const Bottom = styled.section`
     height: 257px;
     background-color: gray;
 `;
-
-export const Footer = styled.footer`
-    width: 100%;
-    height: 49px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: fixed;
-    bottom: 0;
-
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-`;

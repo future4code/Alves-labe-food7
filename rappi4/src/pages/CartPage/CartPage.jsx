@@ -1,8 +1,6 @@
-import { Screen, Header, Address, Main, Bottom, Footer } from "./styles/styled";
+import { Screen, Header, Address, Main, Bottom } from "./styles/styled";
 import "./styles/index.css"
-import home from './img/home.svg'
-import cart from './img/cart.svg'
-import profile from './img/profile.svg'
+import { Footer } from "../../components/Footer/Footer";
 
 export function CartPage() {
 
@@ -27,17 +25,7 @@ export function CartPage() {
           <p>R$67,00</p>
         </div>
       </Bottom>
-      <Footer>
-        <div>
-          <img src={home} alt="" />
-        </div>
-        <div>
-          <img src={cart} alt="" />
-        </div>
-        <div>
-          <img src={profile} alt="" />
-        </div>
-      </Footer>
+      <Footer/>
     </Screen>
   )
 }
