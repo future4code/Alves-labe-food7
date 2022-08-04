@@ -28,7 +28,6 @@ const LoginPage = () => {
 
   return (
     <ScreenContainer>
-      <Header />
       <LogoContainer>
         <img src={logo} />
       </LogoContainer>
