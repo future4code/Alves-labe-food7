@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
 import axios from "axios";
 import { goToDetailRestaurant } from "../../routes/cordinator";
-import { CardRestaurante, Image, Line, ResName } from "./styled";
+import { CardRestaurante, Image, Line, ResName, Screen, Main } from "./styled";
+import { HeaderWord } from "../../components/HeaderWord";
+import { Input } from "../SearchPage/styles/styled";
+import { Footer } from '../../components/Footer/Footer'
+import { getColor } from "./getColor";
 
 const FeedPage = () => {
   const [restaurants, setRestaurantes] = useState([]);
@@ -39,7 +43,7 @@ const FeedPage = () => {
         key={res.id}
         onClick={() => goToDetailRestaurant(navigate, res.id)}
       >
-        <Image>
+        <Image style={{ backgroundColor: getColor(res) }}>
           <img src={res.logoUrl} />
           {/* <Image2 src={res.logoUrl} /> */}
         </Image>
@@ -52,7 +56,16 @@ const FeedPage = () => {
     );
   });
 
-  return <div>{rendeRestaurants}</div>;
+  return (
+    <Screen>
+      <HeaderWord word={"Rappi4"} />
+      <Main>
+        <Input type="text" placeholder="Restaurante" />
+        {rendeRestaurants}
+      </Main>
+      <Footer page="home" />
+    </Screen>
+  )
 };
 
 export default FeedPage;

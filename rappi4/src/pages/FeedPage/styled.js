@@ -13,7 +13,7 @@ export const Image = styled.div`
 `;
 
 export const CardRestaurante = styled.div`
-  width: 360px;
+  width: 90%;
   height: 188px;
   margin: 0.5rem;
   border-radius: 8px;
@@ -49,4 +49,21 @@ export const ResName = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #e86e5a;
+`;
+
+export const Screen = styled.section`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Main = styled.section`
+  width: 100%;
+  min-height: calc(100vh - 44px - 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
 `;
