@@ -11,8 +11,7 @@ const DetailRestaurant = () => {
   const [cardProducts, setCardProducts] = useState([]);
   const [categories, setCategories] = useState();
 
-  const params = useParams();
-  console.log(cardProducts);
+  const params = useParams();     
 
   useEffect(() => {
     const token = localStorage.getItem("token");
