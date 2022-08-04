@@ -21,11 +21,14 @@ export function CartPage() {
       <Bottom>
         <p className="frete">Frete R$6,00</p>
         <div className="subtotal">
-          <h1>SUBTOTAL</h1>
-          <p>R$67,00</p>
+          <p>SUBTOTAL</p>
+          <p className="price">R$67,00</p>
         </div>
+        <p className="ways">Forma de pagamento</p>
+        <hr />
+        <button>Confirmar</button>
       </Bottom>
-      <Footer/>
+      <Footer page='cart'/>
     </Screen>
   )
 }
