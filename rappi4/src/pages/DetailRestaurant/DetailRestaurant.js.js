@@ -6,11 +6,11 @@ import CardRestaurant from "./CardRestaurant";
 import * as D from "./styled";
 
 const DetailRestaurant = () => {
-  const [detailRestaurant, setDetailRestaurant] = useState([]);
+  const [detailRestaurant, setDetailRestaurant] = useState();
   const [cardProducts, setCardProducts] = useState([]);
+  const [categories, setCategories] = useState();
 
-  const params = useParams();
-  console.log(detailRestaurant);
+  const params = useParams();   
   console.log(cardProducts);
 
   useEffect(() => {
@@ -28,11 +28,20 @@ const DetailRestaurant = () => {
       .catch((error) => {
         console.log(error.response);
       });
-  }, []);
+  }, []);    
+  useEffect(() => {
+    const allCategories = cardProducts && cardProducts.map((product) => product.category)
+    const categories = allCategories?.filter((item, i) => {
+      return allCategories.indexOf(item) === i
+    })
+    setCategories(categories)
 
+  }, [cardProducts])
   return (
     <D.ScreenContainer>
-      <D.ImgLogo src={detailRestaurant?.logoUrl} />
+      {detailRestaurant ?
+        <div>
+      <D.ImgLogo src={detailRestaurant.logoUrl} />
       <D.HederDetails>
         <D.ResName>{detailRestaurant.name}</D.ResName>
         <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
@@ -45,7 +54,9 @@ const DetailRestaurant = () => {
       </D.HederDetails>
       <D.Products>Produtos</D.Products>
       <D.Lin></D.Lin>
-      <CardRestaurant cardProducts={cardProducts} />
+      <CardRestaurant cardProducts={cardProducts} categories={categories}/>
+      </div> : <p>Carregando...</p>
+    }
     </D.ScreenContainer>
   );
 };
