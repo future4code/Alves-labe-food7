@@ -39,7 +39,9 @@ const DetailRestaurant = () => {
   }, [cardProducts])
   return (
     <D.ScreenContainer>
-      <D.ImgLogo src={detailRestaurant?.logoUrl} />
+      {detailRestaurant ?
+        <div>
+      <D.ImgLogo src={detailRestaurant.logoUrl} />
       <D.HederDetails>
         <D.ResName>{detailRestaurant.name}</D.ResName>
         <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
@@ -52,7 +54,9 @@ const DetailRestaurant = () => {
       </D.HederDetails>
       <D.Products>Produtos</D.Products>
       <D.Lin></D.Lin>
-      <CardRestaurant cardProducts={cardProducts} />
+      <CardRestaurant cardProducts={cardProducts} categories={categories}/>
+      </div> : <p>Carregando...</p>
+    }
     </D.ScreenContainer>
   );
 };

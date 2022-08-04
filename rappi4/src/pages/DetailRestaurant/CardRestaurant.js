@@ -2,31 +2,6 @@ import React from "react";
 import * as CR from "./styled";
 
 const CardRestaurant = ({ cardProducts, categories }) => {
-  // const tipo = cardProducts.map((product) => {
-
-  // })
-  // const menuScreen = cardProducts.map((product) => {
-  //   const typeCategory = product.category
-
-  //     return (
-  //       <CR.CardContainer key={product.id}>
-  //         <div>
-  //           <p>{typeCategory}</p>
-  //         </div>
-  //         <div>
-  //           <CR.ImgCard src={product.photoUrl} />
-  //         </div>
-  //         <CR.ProductCard>
-  //           <p>{product.name}</p>
-  //           <p>{product.description}</p>
-  //           <p>R${product.price}</p>
-  //           <button>adicionar</button>
-  //           <button>remover</button>
-  //         </CR.ProductCard>
-  //       </CR.CardContainer>
-  //     );
-
-  // });
 
   return (
     <div>
