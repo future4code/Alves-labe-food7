@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ImgLogo = styled.img`
   width: 328px;
   height: 120px;
-  margin: 17px 16px 12px;
+  margin: 11px 16px 12px;
   object-fit: contain;
 `;
 export const CardContainer = styled.div`
@@ -95,7 +95,8 @@ export const ScreenContainer = styled.div`
 `;
 
 export const HederDetails = styled.div`
-  padding-right: 3.25rem;
+  /* padding-right: 3.25rem; */
+  width: 328px;
 `;
 
 export const Lin = styled.div`
@@ -147,4 +148,12 @@ export const Price = styled.p`
   line-height: normal;
   letter-spacing: -0.39px;
   color: #000;
+`;
+
+export const Main = styled.section`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

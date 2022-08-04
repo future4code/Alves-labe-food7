@@ -6,7 +6,10 @@ export const Container = styled.div`
   height: 44px;
   align-items: center;
   justify-content: center;
-  background: #ededed;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 8px;
 `;
 
 export const Image = styled.div`

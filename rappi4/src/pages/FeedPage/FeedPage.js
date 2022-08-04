@@ -9,6 +9,7 @@ import { HeaderWord } from "../../components/HeaderWord";
 import { Input } from "../SearchPage/styles/styled";
 import { Footer } from '../../components/Footer/Footer'
 import { getColor } from "./getColor";
+import { goToSearch } from "../../routes/cordinator";
 
 const FeedPage = () => {
   const [restaurants, setRestaurantes] = useState([]);
@@ -59,7 +60,7 @@ const FeedPage = () => {
     <Screen>
       <HeaderWord word={"Rappi4"} />
       <Main>
-        <Input type="text" placeholder="Restaurante" />
+        <Input placeholder="Restaurante" onClick={()=>goToSearch(navigate)} />
         {rendeRestaurants}
       </Main>
       <Footer page="home" />

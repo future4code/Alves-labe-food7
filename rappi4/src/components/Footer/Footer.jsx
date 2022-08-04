@@ -39,7 +39,7 @@ export function Footer(props) {
           <img src={props.page === "cart" ? cart2 : cart1} alt="" onClick={()=>goToCart(navigate)} />
         </div>
         <div>
-          <img src={props.page === "profilePage" ? profile2 : profile1} alt="" onClick={()=>goToProfilePage(navigate)} />
+          <img src={props.page === "profile" ? profile2 : profile1} alt="" onClick={()=>goToProfilePage(navigate)} />
         </div>
       </FooterStyle>
   )
