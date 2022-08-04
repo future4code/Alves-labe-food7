@@ -2,7 +2,7 @@
 
 # Rappi4
 
-Projeto Final do módulo Front-End.
+O Projeto Final do módulo Front-End
 
 ## Link do surge
 
