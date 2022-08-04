@@ -67,7 +67,7 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 68px;
 `;
 export const Form = styled.form`
   margin-top: 0;

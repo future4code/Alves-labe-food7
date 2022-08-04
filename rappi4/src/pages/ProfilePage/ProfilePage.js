@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { goUpdateProfile, goUpdateAdress } from "../../routes/cordinator";
 import * as PR from "./styled";
 import edit from "../../assets/edit.svg";
+import {Footer} from '../../components/Footer/Footer'
 
 const ProfilePage = () => {
   const navigate = useNavigate();
@@ -72,6 +73,7 @@ const ProfilePage = () => {
         <PR.AdressName>{perfil.address}</PR.AdressName>
         <PR.ImgAd src={edit} onClick={() => goUpdateAdress(navigate)} />
       </PR.Adress>
+      <Footer page="profile"/>
     </PR.Screen>
   );
 };
