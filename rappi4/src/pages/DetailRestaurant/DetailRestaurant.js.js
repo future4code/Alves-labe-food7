@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../constants/urls";
 import { useParams } from "react-router";
 import CardRestaurant from "./CardRestaurant";
 import * as D from "./styled";
 import Header from "../../components/Header";
+import { GlobalContext } from "../../services/Global/GlobalContext";
 
 const DetailRestaurant = () => {
-  const [detailRestaurant, setDetailRestaurant] = useState();
-  const [cardProducts, setCardProducts] = useState([]);
   const [categories, setCategories] = useState();
+  const {
+    detailRestaurant,
+    setDetailRestaurant,
+    cardProducts,
+    setCardProducts,
+  } = useContext(GlobalContext);
 
-  const params = useParams();     
+  const params = useParams();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -30,17 +35,17 @@ const DetailRestaurant = () => {
       });
   }, []);
   useEffect(() => {
-    const allCategories = cardProducts && cardProducts.map((product) => product.category)
+    const allCategories =
+      cardProducts && cardProducts.map((product) => product.category);
     const categories = allCategories?.filter((item, i) => {
-      return allCategories.indexOf(item) === i
-    })
-    setCategories(categories)
-
-  }, [cardProducts])
+      return allCategories.indexOf(item) === i;
+    });
+    setCategories(categories);
+  }, [cardProducts]);
   return (
     <D.ScreenContainer>
       <Header word={detailRestaurant?.name} back={2} />
-      {detailRestaurant ?
+      {detailRestaurant ? (
         <D.Main>
           <D.ImgLogo src={detailRestaurant.logoUrl} />
           <D.HederDetails>
@@ -55,9 +60,11 @@ const DetailRestaurant = () => {
           </D.HederDetails>
           <D.Products>Produtos</D.Products>
           <D.Lin></D.Lin>
-          <CardRestaurant cardProducts={cardProducts} categories={categories} />
-        </D.Main> : <p>Carregando...</p>
-      }
+          <CardRestaurant categories={categories} />
+        </D.Main>
+      ) : (
+        <p>Carregando...</p>
+      )}
     </D.ScreenContainer>
   );
 };
