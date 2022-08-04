@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import * as CR from "./styled";
+import { GlobalContext } from "../../services/Global/GlobalContext";
 
 const CardRestaurant = ({ cardProducts, categories }) => {
+  const { cart, setCart } = useContext(GlobalContext);
+
+  const addCart = (newItem) => {
+    const index = cart.findIndex((i) => i.id === newItem.id);
+    const newCart = [...cart];
+    if (index === -1) {
+      const cartItem = { ...newItem, amount: 1 };
+      newCart.push(cartItem);
+    } else {
+      newCart[index].amount = newCart[index].amount + 1;
+    }
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart))
+  };
+  console.log(cart);
 
   return (
     <div>
@@ -24,9 +40,10 @@ const CardRestaurant = ({ cardProducts, categories }) => {
                           <CR.ProductCard>
                             <CR.ResName>{product.name}</CR.ResName>
                             <CR.ResName>{product.description}</CR.ResName>
-                            <CR.Price>R${product.price}</CR.Price>
-                            <CR.Button>adicionar</CR.Button>
-                            
+                            <CR.Price>R${product.price.toFixed(2)}</CR.Price>
+                            <CR.Button onClick={() => addCart(product)}>
+                              adicionar
+                            </CR.Button>
                           </CR.ProductCard>
                         </CR.CardContainer>
                       );

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import RoutesPage from "./routes/RoutesPage"
 import GlobalState from "./services/Global/GlobalState"
 
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;

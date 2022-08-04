@@ -10,8 +10,7 @@ const DetailRestaurant = () => {
   const [cardProducts, setCardProducts] = useState([]);
   const [categories, setCategories] = useState();
 
-  const params = useParams();   
-  console.log(cardProducts);
+  const params = useParams();     
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -47,7 +46,7 @@ const DetailRestaurant = () => {
         <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
         <D.Line>
           <p>{detailRestaurant.deliveryTime} min</p>
-          <D.Ship>Frete R${detailRestaurant.shipping},00</D.Ship>
+          <D.Ship>Frete R${detailRestaurant.shipping.toFixed(2)}</D.Ship>
         </D.Line>
 
         <D.FontDetails>{detailRestaurant.address}</D.FontDetails>
