@@ -6,7 +6,7 @@ import cart2 from './img/cart2.svg'
 import profile1 from './img/profile1.svg'
 import profile2 from './img/profile2.svg'
 import styled from 'styled-components';
-import { goToCart, goToEditProfile, goToFeedPage } from '../../routes/cordinator';
+import { goToCart, goToProfilePage, goToFeedPage } from '../../routes/cordinator';
 import { useNavigate } from 'react-router';
 
 const FooterStyle = styled.footer`
@@ -39,7 +39,7 @@ export function Footer(props) {
           <img src={props.page === "cart" ? cart2 : cart1} alt="" onClick={()=>goToCart(navigate)} />
         </div>
         <div>
-          <img src={props.page === "profile" ? profile2 : profile1} alt="" onClick={()=>goToEditProfile(navigate)} />
+          <img src={props.page === "profilePage" ? profile2 : profile1} alt="" onClick={()=>goToProfilePage(navigate)} />
         </div>
       </FooterStyle>
   )
