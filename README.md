@@ -31,6 +31,5 @@ Projeto Final do módulo Front-End.
 </div>
   
   
- ## Documentação 
- -https://app.zeplin.io/project/5dd5ae92669af1bc817c8359
- -API: https://documenter.getpostman.com/view/7549981/SWTEdGtT#3ca41feb-3e6c-4b75-91e8-54cf1e363c2c
+ ### Documentação 
+ API: https://documenter.getpostman.com/view/7549981/SWTEdGtT#3ca41feb-3e6c-4b75-91e8-54cf1e363c2c
