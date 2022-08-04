@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../services/profile";
 import { Button, Input, Form, Fieldset } from "./styled";
 
 const SignUpForm = () => {
+  const [confirmPassword, setConfirmPassword] = useState("")
   const { form, onChange, clear } = useForm({
     name: "",
     email: "",
@@ -13,9 +14,13 @@ const SignUpForm = () => {
   });
   const navigate = useNavigate();
 
+  const onChangeConfirmPassword = (event) => {
+    setConfirmPassword(event.target.value)
+  }
+
   const onSubmitSignUp = (event) => {
     event.preventDefault();
-    registerUser(form, clear, navigate);
+    registerUser(form, clear, navigate, confirmPassword);
   };
 
   return (
@@ -74,11 +79,11 @@ const SignUpForm = () => {
       <Fieldset>
         <legend>Confirme sua Senha*</legend>
         <input
-          name="password"
+          name="confirmPassword"
           placeholder="Mínimo 6 caracteres"
           type="password"
-          value={form.password}
-          onChange={onChange}
+          value={confirmPassword}
+          onChange={onChangeConfirmPassword}
           required
           pattern={"^.{6,}"}
           title={"Senha deve ter no mínimo 6 caracteres"}

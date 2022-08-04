@@ -26,7 +26,6 @@ export const ImgCard = styled.img`
   height: 112.6px;
   object-fit: contain;
 `;
-
 export const ResName = styled.p`
   margin-bottom: 4px;
   margin-top: 0;
