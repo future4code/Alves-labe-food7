@@ -26,6 +26,10 @@ export const ImgCard = styled.img`
   height: 112.6px;
   object-fit: contain;
 `;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 export const ResName = styled.p`
   margin-bottom: 4px;
   margin-top: 0;
@@ -40,7 +44,42 @@ export const ResName = styled.p`
   color: #e86e5a;
   padding-bottom: 4px;
 `;
-export const Price = styled.p`
+
+export const Line = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+  padding-bottom: 4px;
+`;
+
+export const Ship = styled.p`
+  padding-left: 3rem;
+`;
+
+export const FontDetails = styled.p`
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+  padding-bottom: 4px;
+`;
+
+export const Products = styled.p`
+  width: 328px;
+  height: 18px;
+  margin: 16px 16px 8px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
@@ -50,6 +89,25 @@ export const Price = styled.p`
   letter-spacing: -0.39px;
   color: #000;
 `;
+
+export const ScreenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-top: 0;
+`;
+
+export const HederDetails = styled.div`
+  padding-right: 3.25rem;
+`;
+
+export const Lin = styled.div`
+  color: #000000;
+  width: 328px;
+  border-bottom: 1px solid #000000;
+`;
+
 export const Button = styled.button`
   width: 90px;
   height: 31px;
@@ -69,5 +127,28 @@ export const Button = styled.button`
   line-height: normal;
   letter-spacing: -0.29px;
   text-align: center;
+  color: #000;
+`;
+
+export const Description = styled.p`
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.34px;
+  color: #b8b8b8;
+  margin-bottom: 6px;
+`;
+
+export const Price = styled.p`
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
   color: #000;
 `;

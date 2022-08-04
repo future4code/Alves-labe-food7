@@ -3,6 +3,7 @@ import { Button, Input, Form, Fieldset } from "./styled";
 import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 import { createAdress } from "../../services/adress";
+import {goToFeedPage} from '../../routes/cordinator'
 
 function AdressForm() {
   const navigate = useNavigate();
@@ -18,14 +19,14 @@ function AdressForm() {
   const onSubmitForm = (event) => {
     event.preventDefault();
     createAdress(form, clear, navigate);
+    goToFeedPage(navigate)
   };
 
   return (
     <Form onSubmit={onSubmitForm}>
       <Fieldset>
         <legend>Logradouro*</legend>
-        <input
-          legend="Logradouro*"
+        <Input
           name={"street"}
           id="street"
           value={form.street}
