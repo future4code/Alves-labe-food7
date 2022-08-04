@@ -7,7 +7,7 @@ export const login = (body, clear, navigate) => {
    
     axios.post(`${BASE_URL}/login`, body)
         .then((res) => {
-            console.log(body)
+            
             console.log(res.data.token)
             localStorage.setItem("token", res.data.token)
             console.log(res.data.user.hasAddress)

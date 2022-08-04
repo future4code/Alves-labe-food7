@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import * as CR from "./styled";
 import { GlobalContext } from "../../services/Global/GlobalContext";
 
-const CardRestaurant = ({ cardProducts, categories }) => {
-  const { cart, setCart } = useContext(GlobalContext);
+const CardRestaurant = ({categories }) => {
+  const { cart, setCart, cardProducts } = useContext(GlobalContext);
 
   const addCart = (newItem) => {
     const index = cart.findIndex((i) => i.id === newItem.id);
@@ -16,6 +16,7 @@ const CardRestaurant = ({ cardProducts, categories }) => {
     }
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart))
+    localStorage.setItem("cart", JSON.stringify(cardProducts))
   };
   console.log(cart);
 
