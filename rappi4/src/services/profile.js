@@ -18,3 +18,37 @@ export const registerUser = (bory, clear, navigate) => {
 };
 
 
+export const putProfile = (body, clear, navigate) => {
+  const url = `${BASE_URL}/profile`
+    const token = localStorage.getItem("token")
+    const header = {
+      headers: {
+        auth: token
+      },
+    }
+    axios.put(url,body, header)
+      .then((resp) => {
+        console.log(resp.data)
+      })
+      .catch((err) => {
+        console.log("errooooo", err.response)
+      })
+  }
+
+  export const getProfileAdress = (body, clear, navigate) => {
+    const url = `${BASE_URL}/address`
+      const token = localStorage.getItem("token")
+      const header = {
+        headers: {
+          auth: token
+        },
+      }
+      axios.put(url,body, header)
+        .then((resp) => {
+          console.log(resp.data)
+        })
+        .catch((err) => {
+          console.log("errooooo", err.response)
+        })
+    }
+  

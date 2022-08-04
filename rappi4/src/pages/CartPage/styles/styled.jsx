@@ -60,7 +60,7 @@ export const Address = styled.section`
 export const Main = styled.section`
     width: 90%;
     /* height: calc(100vh - 120px); */
-    background-color: green;
+    /* background-color: green; */
     position: relative;
 
     .name {
@@ -89,7 +89,55 @@ export const Main = styled.section`
 `;
 
 export const Bottom = styled.section`
-    width: 100%;
-    height: 257px;
-    background-color: gray;
+    width: 90%;
+    height: 241px;
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 49px;
+
+    .p {
+        font-family: Roboto;
+        font-size: 16px;
+        letter-spacing: -0.39px;
+    }
+
+    .frete {
+        align-self: flex-end;
+        margin-bottom: 13px;
+    }
+
+    .subtotal {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        .price {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: -0.43px;
+            color: #e86e5a;
+        }
+    }
+
+    .ways {
+        margin-bottom: 8px;
+    }
+
+    hr {
+        border-top: 1px solid #000;
+        margin-bottom: 80px;
+    }
+
+    button {
+        height: 42px;
+        border-radius: 2px;
+        background-color: #e86e5a;
+        border: none;
+        font-family: Roboto;
+        font-size: 16px;
+        letter-spacing: -0.39px;
+    }
 `;
