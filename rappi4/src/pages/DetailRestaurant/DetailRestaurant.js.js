@@ -6,11 +6,11 @@ import CardRestaurant from "./CardRestaurant";
 import * as D from "./styled";
 
 const DetailRestaurant = () => {
-  const [detailRestaurant, setDetailRestaurant] = useState([]);
+  const [detailRestaurant, setDetailRestaurant] = useState();
   const [cardProducts, setCardProducts] = useState([]);
+  const [categories, setCategories] = useState();
 
-  const params = useParams(); 
-  console.log(detailRestaurant);
+  const params = useParams();   
   console.log(cardProducts);
 
   useEffect(() => {
@@ -29,11 +29,19 @@ const DetailRestaurant = () => {
         console.log(error.response);
       });
   }, []);    
+  useEffect(() => {
+    const allCategories = cardProducts && cardProducts.map((product) => product.category)
+    const categories = allCategories?.filter((item, i) => {
+      return allCategories.indexOf(item) === i
+    })
+    setCategories(categories)
 
+  }, [cardProducts])
   return (
     <div>
+      {detailRestaurant?<div>
       <div>
-        <D.ImgLogo src={detailRestaurant?.logoUrl} />
+        <D.ImgLogo src={detailRestaurant.logoUrl} />
         <h1>{detailRestaurant.name}</h1>
         <p>{detailRestaurant.category}</p>
         <p>
@@ -42,7 +50,8 @@ const DetailRestaurant = () => {
         <p>{detailRestaurant.address}</p>
       </div>
       <h3>Produtos</h3>      
-      <CardRestaurant cardProducts={cardProducts}/>
+      <CardRestaurant cardProducts={cardProducts} categories={categories}/>
+      </div> : <p>Carregando...</p>}
     </div>
   );
 };

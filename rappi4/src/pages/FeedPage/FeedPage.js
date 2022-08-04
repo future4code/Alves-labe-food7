@@ -26,8 +26,7 @@ const FeedPage = () => {
     axios
       .get(url, header)
       .then((resp) => {
-        setRestaurantes(resp.data.restaurants);
-        console.log(resp.data.restaurants);
+        setRestaurantes(resp.data.restaurants);        
       })
       .catch((err) => {
         console.log("errooooo", err.response);
