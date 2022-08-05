@@ -33,7 +33,7 @@ const ProfilePage = () => {
       .get(url, header)
       .then((resp) => {
         setPerfil(resp.data.user);
-        console.log(resp.data.user);
+        // console.log(resp.data.user);
       })
       .catch((err) => {
         console.log("errooooo", err.response);
@@ -52,7 +52,7 @@ const ProfilePage = () => {
       .get(url, header)
       .then((resp) => {
         setHistory(resp);
-        console.log(resp);
+        // console.log(resp);
       })
       .catch((err) => {
         console.log("errooooo", err.response);

@@ -88,14 +88,26 @@ export const Main = styled.section`
     }
 `;
 
+export const Products = styled.section`
+    width: 100%;
+    min-height: calc(100vh - 241px - 48px - 44px - 76px - 112px);
+    margin-bottom: 55px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+`;
+
 export const Bottom = styled.section`
     width: 90%;
     height: 241px;
     /* background-color: gray; */
     display: flex;
     flex-direction: column;
-    position: fixed;
-    bottom: 49px;
+    /* position: fixed; */
+    position: relative;
+    bottom: 41px;
 
     .p {
         font-family: Roboto;
@@ -127,8 +139,9 @@ export const Bottom = styled.section`
     }
 
     hr {
+        border: none;
         border-top: 1px solid #000;
-        margin-bottom: 80px;
+        margin-bottom: 7px;
     }
 
     button {
@@ -139,5 +152,30 @@ export const Bottom = styled.section`
         font-family: Roboto;
         font-size: 16px;
         letter-spacing: -0.39px;
+        margin-top: 8px;
     }
+`;
+
+export const Form = styled.form`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: -0.39px;
+    gap: 8px;
+
+    div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+`;
+
+export const Empty = styled.p`
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: -0.39px;
+    position: relative;
+    top: 4px;
 `;

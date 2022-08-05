@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import * as CR from "./styled";
 import { GlobalContext } from "../../services/Global/GlobalContext";
 
-const CardRestaurant = ({categories }) => {
+const CardRestaurant = ({categories, restaurant }) => {
   const { cart, setCart, cardProducts } = useContext(GlobalContext);
 
   const addCart = (newItem) => {
     const index = cart.findIndex((i) => i.id === newItem.id);
-    const newCart = [...cart];
+    const newCart = localStorage.getItem("cart") === null ? [] : [...JSON.parse(localStorage.getItem("cart"))];
     if (index === -1) {
       const cartItem = { ...newItem, amount: 1 };
       newCart.push(cartItem);
@@ -16,9 +16,11 @@ const CardRestaurant = ({categories }) => {
     }
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart))
-    localStorage.setItem("cart", JSON.stringify(cardProducts))
+    localStorage.setItem("restaurant", JSON.stringify(restaurant))
+    // localStorage.setItem("cart", JSON.stringify(cardProducts))
   };
-  console.log(cart);
+  // console.log(localStorage.getItem("cart"));
+  // console.log(restaurant)
 
   return (
     <div>
@@ -34,8 +36,8 @@ const CardRestaurant = ({categories }) => {
                   cardProducts.map((product) => {
                     if (item === product.category) {
                       return (
-                        <CR.CardContainer>
-                          <div key={product.id}>
+                        <CR.CardContainer key={product.id}>
+                          <div>
                             <CR.ImgCard src={product.photoUrl} />
                           </div>
                           <CR.ProductCard>

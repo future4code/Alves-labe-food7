@@ -54,7 +54,7 @@ function AdressForm() {
           value={form.complement}
           onChange={onChange}
           placeholder="Apto. / Bloco"
-          type={"number"}
+          type={"text"}
         />
       </Fieldset>
       <Fieldset>

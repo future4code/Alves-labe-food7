@@ -42,8 +42,8 @@ export const Fieldset = styled.fieldset`
     font-style: normal;
   }
   input {
-    width: 264px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
     font-family: "Roboto";
     font-size: 16px;
     font-weight: normal;
@@ -53,11 +53,14 @@ export const Fieldset = styled.fieldset`
     letter-spacing: -0.39px;
     color: black;
     border: none;
-    margin-left: 0.5rem;
+    padding: 0 16px;
     ::placeholder {
       color: #b8b8b8;
       font-family: "Roboto";
     }
+    :focus {
+    outline-width: 0;
+  }
   }
 `;
 
