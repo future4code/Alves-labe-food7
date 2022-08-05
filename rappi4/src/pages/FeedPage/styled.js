@@ -67,3 +67,11 @@ export const Main = styled.section`
   align-items: center;
   margin-bottom: 60px;
 `;
+
+export const Loading = styled.p`
+  font-family: "Roboto";
+  font-size: 16px;
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+  margin-top: 8px;
+`;
