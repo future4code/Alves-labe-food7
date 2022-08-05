@@ -1,6 +1,6 @@
 import { BASE_URL } from "../constants/urls";
 import axios from "axios";
-import {goToAdress} from "../routes/cordinator"
+import {goToAdress, goToFeedPage} from "../routes/cordinator"
 
 export const registerUser = (bory, clear, navigate, confirmPassword) => {
   if (bory.password === confirmPassword) {
@@ -32,10 +32,11 @@ export const putProfile = (body, clear, navigate) => {
     }
     axios.put(url,body, header)
       .then((resp) => {
-        console.log(resp.data)
+        goToFeedPage(navigate)
+        clear()       
       })
       .catch((err) => {
-        console.log("errooooo", err.response)
+        alert(err.response)
       })
   }
 
@@ -49,10 +50,11 @@ export const putProfile = (body, clear, navigate) => {
       }
       axios.put(url,body, header)
         .then((resp) => {
-          console.log(resp.data)
+        goToFeedPage(navigate)
+        clear()
         })
         .catch((err) => {
-          console.log("errooooo", err.response)
+          alert(err.response)
         })
     }
   

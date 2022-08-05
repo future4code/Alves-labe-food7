@@ -11,4 +11,4 @@ const useProtectedPage = () => {
     }
   }, [navigate]);
 };
-export default useUntectedPage;
+export default useProtectedPage;

@@ -53,7 +53,7 @@ const DetailRestaurant = () => {
             <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
             <D.Line>
               <p>{detailRestaurant.deliveryTime} min</p>
-              <D.Ship>Frete R${detailRestaurant.shipping},00</D.Ship>
+              <D.Ship>Frete {detailRestaurant.shipping.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</D.Ship>
             </D.Line>
 
             <D.FontDetails>{detailRestaurant.address}</D.FontDetails>

@@ -12,6 +12,7 @@ export const createAdress = (body, clear, navigate) => {
       localStorage.setItem("token", res.data.token);
       console.log(res.data);
       console.log(localStorage.getItem("token"),  res.data.token);
+      
       clear();
     })
     .catch((err) => console.log(err.response.data));

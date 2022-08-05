@@ -7,7 +7,7 @@ import { goToDetailRestaurant } from "../../routes/cordinator";
 import { CardRestaurante, Image, Line, ResName, Screen, Main } from "./styled";
 import { HeaderWord } from "../../components/HeaderWord";
 import { Input } from "../SearchPage/styles/styled";
-import { Footer } from '../../components/Footer/Footer'
+import { Footer } from "../../components/Footer/Footer";
 import { getColor } from "./getColor";
 import { goToSearch } from "../../routes/cordinator";
 
@@ -30,7 +30,7 @@ const FeedPage = () => {
     axios
       .get(url, header)
       .then((resp) => {
-        setRestaurantes(resp.data.restaurants);        
+        setRestaurantes(resp.data.restaurants);
       })
       .catch((err) => {
         console.log("errooooo", err.response);
@@ -50,7 +50,13 @@ const FeedPage = () => {
         <ResName>{res.name}</ResName>
         <Line>
           <p>{res.deliveryTime}min</p>
-          <p>Frete R${res.shipping},00</p>
+          <p>
+            Frete{" "}
+            {res.shipping.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
         </Line>
       </CardRestaurante>
     );
@@ -60,12 +66,12 @@ const FeedPage = () => {
     <Screen>
       <HeaderWord word={"Rappi4"} />
       <Main>
-        <Input placeholder="Restaurante" onClick={()=>goToSearch(navigate)} />
+        <Input placeholder="Restaurante" onClick={() => goToSearch(navigate)} />
         {rendeRestaurants}
       </Main>
       <Footer page="home" />
     </Screen>
-  )
+  );
 };
 
 export default FeedPage;

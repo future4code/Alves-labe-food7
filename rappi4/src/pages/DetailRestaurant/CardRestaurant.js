@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import * as CR from "./styled";
 import { GlobalContext } from "../../services/Global/GlobalContext";
 
-const CardRestaurant = ({categories }) => {
+const CardRestaurant = ({ categories }) => {
   const { cart, setCart, cardProducts } = useContext(GlobalContext);
 
   const addCart = (newItem) => {
@@ -15,8 +15,8 @@ const CardRestaurant = ({categories }) => {
       newCart[index].amount = newCart[index].amount + 1;
     }
     setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart))
-    localStorage.setItem("cart", JSON.stringify(cardProducts))
+    localStorage.setItem("cart", JSON.stringify(newCart));
+    localStorage.setItem("cart", JSON.stringify(cardProducts));
   };
   console.log(cart);
 
@@ -34,14 +34,19 @@ const CardRestaurant = ({categories }) => {
                   cardProducts.map((product) => {
                     if (item === product.category) {
                       return (
-                        <CR.CardContainer>
-                          <div key={product.id}>
+                        <CR.CardContainer key={product.id}>
+                          <div>
                             <CR.ImgCard src={product.photoUrl} />
                           </div>
                           <CR.ProductCard>
                             <CR.ResName>{product.name}</CR.ResName>
                             <CR.ResName>{product.description}</CR.ResName>
-                            <CR.Price>R${product.price.toFixed(2)}</CR.Price>
+                            <CR.Price>
+                              {product.price.toLocaleString("pt-BR", {
+                                style: "currency",
+                                currency: "BRL",
+                              })}
+                            </CR.Price>
                             <CR.Button onClick={() => addCart(product)}>
                               adicionar
                             </CR.Button>
