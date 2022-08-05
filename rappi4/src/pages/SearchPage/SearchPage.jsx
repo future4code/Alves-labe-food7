@@ -63,7 +63,7 @@ export function SearchPage() {
         <img src={back} alt="Voltar" onClick={()=>navigate(-1)} />
         <h1>Busca</h1>
       </Header>
-      <Input type="text" placeholder="Restaurante" autoFocus name="filter" value={form.filter} onChange={onChange} />
+      <Input type="text" placeholder="Restaurante" autoFocus autoComplete="off" name="filter" value={form.filter} onChange={onChange} />
       {form.filter === '' ? <P>Busque por nome de restaurante</P> : rendeRestaurants.length === 0 ? <P>Não encontramos :(</P> : rendeRestaurants}
     </Screen>
   )
