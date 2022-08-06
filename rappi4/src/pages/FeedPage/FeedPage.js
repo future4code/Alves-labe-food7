@@ -7,7 +7,7 @@ import { goToDetailRestaurant } from "../../routes/cordinator";
 import { CardRestaurante, Image, Line, ResName, Screen, Main, Loading } from "./styled";
 import { HeaderWord } from "../../components/HeaderWord";
 import { Input } from "../SearchPage/styles/styled";
-import { Footer } from '../../components/Footer/Footer'
+import { Footer } from "../../components/Footer/Footer";
 import { getColor } from "./getColor";
 import { goToSearch } from "../../routes/cordinator";
 import { ActiveOrder } from "../../components/ActiveOrder";
@@ -68,7 +68,13 @@ const FeedPage = () => {
         <ResName>{res.name}</ResName>
         <Line>
           <p>{res.deliveryTime}min</p>
-          <p>Frete R${res.shipping},00</p>
+          <p>
+            Frete{" "}
+            {res.shipping.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
         </Line>
       </CardRestaurante>
     );
@@ -86,7 +92,7 @@ const FeedPage = () => {
       <Footer page="home" />
       {activeOrder === "onGoing" && <ActiveOrder />}
     </Screen>
-  )
+  );
 };
 
 export default FeedPage;

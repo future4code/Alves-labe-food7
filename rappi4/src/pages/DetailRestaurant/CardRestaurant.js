@@ -43,7 +43,12 @@ const CardRestaurant = ({categories, restaurant }) => {
                           <CR.ProductCard>
                             <CR.ResName>{product.name}</CR.ResName>
                             <CR.ResName>{product.description}</CR.ResName>
-                            <CR.Price>R${product.price.toFixed(2)}</CR.Price>
+                            <CR.Price>
+                              {product.price.toLocaleString("pt-BR", {
+                                style: "currency",
+                                currency: "BRL",
+                              })}
+                            </CR.Price>
                             <CR.Button onClick={() => addCart(product)}>
                               adicionar
                             </CR.Button>
