@@ -6,6 +6,7 @@ import CardRestaurant from "./CardRestaurant";
 import * as D from "./styled";
 import Header from "../../components/Header";
 import { GlobalContext } from "../../services/Global/GlobalContext";
+import {getColor} from '../FeedPage/getColor'
 
 const DetailRestaurant = () => {
   const [categories, setCategories] = useState();
@@ -47,7 +48,7 @@ const DetailRestaurant = () => {
       <Header word={detailRestaurant?.name} back={2} />
       {detailRestaurant ? (
         <D.Main>
-          <D.ImgLogo src={detailRestaurant.logoUrl} />
+          <D.ImgLogo src={detailRestaurant.logoUrl} style={{backgroundColor: getColor(detailRestaurant)}}/>
           <D.HederDetails>
             <D.ResName>{detailRestaurant.name}</D.ResName>
             <D.FontDetails>{detailRestaurant.category}</D.FontDetails>
@@ -60,7 +61,7 @@ const DetailRestaurant = () => {
           </D.HederDetails>
           <D.Products>Produtos</D.Products>
           <D.Lin></D.Lin>
-          <CardRestaurant categories={categories} />
+          <CardRestaurant categories={categories} restaurant={detailRestaurant} />
         </D.Main>
       ) : (
         <p>Carregando...</p>

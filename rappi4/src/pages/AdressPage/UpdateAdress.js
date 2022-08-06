@@ -20,6 +20,7 @@ const UpdateAdress = () => {
     const onSubmitProfile = (event) => {
         event.preventDefault();
         getProfileAdress(form, clear,navigate);
+        navigate(-1)
       };
   
     return (

@@ -49,7 +49,7 @@ export const Input = styled.input`
   border: 1px solid #d5d8de;
   border-radius: 0.25rem;
   background: #ffffff;
-  width: 22.688rem;
+  width: 100%;
   height: 3.75rem;
   color: black;
   font-family: "Noto Sans";
@@ -57,9 +57,10 @@ export const Input = styled.input`
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 0.5rem;
-  ::placeholder {
-    padding-left: 0.5rem;
+  padding: 0 16px;
+
+  :focus {
+    outline-width: 0;
   }
 `;
 
@@ -113,7 +114,7 @@ export const Fieldset = styled.fieldset`
     font-style: normal;
   }
   input {
-    width: 264px;
+    width: 100%;
     height: 18px;
     font-family: "Roboto";
     font-size: 16px;
@@ -124,7 +125,7 @@ export const Fieldset = styled.fieldset`
     letter-spacing: -0.39px;
     color: black;
     border: none;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
     ::placeholder {
       color: #b8b8b8;
       font-family: "Roboto";
