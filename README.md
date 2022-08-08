@@ -22,10 +22,11 @@ https://inquisitive-work.surge.sh/
 - Editar endereço
 
 ## Grupo
--Klebson Bicalhode
-- Raiza gomes
-- Andre
+
+- Klebson Bicalho
+- Raiza Gomes
 - Gabriel
+- Andre
 
 
 ## Tecnologias ultilizadas
