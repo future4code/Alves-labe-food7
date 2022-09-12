@@ -1,3 +1,5 @@
+# Projeto LabeFood rappi4C
+
 ![logo-future-eats-invert@3x](https://user-images.githubusercontent.com/98356629/181862233-be3e57dc-071a-46b6-8e1b-2934de63d6d7.png)
 
 # Rappi4
@@ -5,7 +7,6 @@
 O Projeto Final do módulo Front-End
 
 ## Link do surge
-https://inquisitive-work.surge.sh/
 
 ## Funções
 
@@ -22,12 +23,6 @@ https://inquisitive-work.surge.sh/
 - Editar endereço
 
 ## Grupo
-
-- Klebson Bicalho
-- Raiza Gomes
-- Gabriel
-- Andre
-
 
 ## Tecnologias ultilizadas
 <div>
